@@ -1,17 +1,29 @@
 import React from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container, Col, Image, Row } from 'react-bootstrap';
+import AcercaDe from '../../assets/acercadenostros.jpg';
 
 const About = () =>
 {
     return(
         <Container>
             <Row>
-                <Col md={ 12 } className="text-center my-5">
+                <Col md={ 12 } className="text-center mt-5">
                     <h1>¿Quienes somos?</h1>
                 </Col>
             </Row>
             <Row>
-                <Col md={ 12 } className="my-5">
+                <Col md={ 12 } className="text-center my-5">
+                    <Image
+                        alt="Acerca de Nosotros"
+                        src={ AcercaDe }
+                        loading="lazy"
+                        width={ 250 }
+                        height={ 215 }
+                    />
+                </Col>
+            </Row>
+            <Row>
+                <Col md={ 12 } className="mb-5">
                     <p>
                         Somos fabricantes desde 1934. Se inicio con la generación del Sr <strong>Cornelio Nava</strong> el cúal 
                         fue uno de los primeros mosaiqueros de la CDMX. Junto con él su ahijado el Sr 

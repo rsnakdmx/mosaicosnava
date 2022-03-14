@@ -25,10 +25,11 @@ const Header = () =>
                 <Navbar.Collapse>
                     <Nav className="me-auto">
                         <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH }>Inicio</Nav.Link>
-                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'nosotros' }>Nosotros</Nav.Link>
-                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'catalogo' }>Nuestros productos</Nav.Link>
-                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'trabajos' }>Nuestros trabajos</Nav.Link>
-                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'contacto' }>Contactanos</Nav.Link>
+                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'nosotros' }>¿Quienes somos?</Nav.Link>
+                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'lavaderos' }>Lavaderos</Nav.Link>
+                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'mosaicos' }>Mosaicos</Nav.Link>
+                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'terrazos' }>Terrazos</Nav.Link>
+                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'contacto' }>Ubicación</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
