@@ -1,40 +1,45 @@
 import React from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
-import { Carousel } from 'react-responsive-carousel';
-import Uno from '../../assets/mozaico1.jpg';
-import Dos from '../../assets/mozaico2.jpg';
-import Tres from '../../assets/mozaico3.jpg';
+import { Button, Container, Col, Image, Row } from 'react-bootstrap';
+import landingImage from '../../assets/landingImage.jpeg';
 
 const Landing = () =>
 {
     return(
-        <Container fluid>
-            <Carousel>
-                <div>
-                    <img loading="lazy" src={ Uno } />
-                    <p className="legend">Texto</p>
-                </div>
-                <div>
-                    <img loading="lazy" src={ Dos } />
-                    <p className="legend">Texto</p>
-                </div>
-                <div>
-                    <img loading="lazy" src={ Tres } />
-                    <p className="legend">Texto</p>
-                </div>
-            </Carousel>
-            <Row>
-                <Col md={ 6 }>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis turpis in augue viverra venenatis. 
-                    Aliquam sit amet ullamcorper ligula, a gravida metus. Phasellus vel libero turpis. Vivamus purus mi, bibendum 
-                    quis nibh eu, placerat mollis augue. Sed malesuada suscipit consequat.
-                </Col>
-                <Col md={ 6 }>
-                    Curabitur condimentum tristique eros vitae vulputate. Duis auctor turpis vitae suscipit hendrerit. Fusce id dui id 
-                    ex semper facilisis. Aliquam maximus vehicula nisl, vel iaculis tortor viverra quis. 
-                </Col>
-            </Row>
-        </Container>
+        <>
+            <Image 
+                alt="Mosaicos y Terrazos Nava" 
+                loading="lazy" 
+                fluid
+                src={ landingImage } 
+            />
+            <Container fluid>
+                <Row>
+                    <Col md={ 12 } className="my-5 text-center">
+                        <h2>¿Quienes somos?</h2>
+                        <p className="text-muted">
+                            Somos fabricantes desde 1934. Cada una de nuestras piezas es fabricada a mano y siguiendo los
+                            más altos estandares de calidad, lo cúal nos permite obtener diseños únicos que elevan la 
+                            plusvalía de su propiedad.
+                        </p>
+
+                        <Button variant="outline-dark">Ver más</Button>
+                    </Col>
+                </Row>
+                <hr />
+
+                <Row>
+                    <Col md={ 12 } className="my-5 text-center">
+                        <h2>¿Dónde puedes encontrarnos?</h2>
+                        <p className="text-muted">
+                            Nos encontramos en Francisco Sarabia No. 17, Entre Celio Garcia y Consuelo, colonia 
+                            Pueblo de Santa Martha Acatitla, delegacion Iztapalapa, codigo postal 09510.
+                        </p>
+                        <Button variant="outline-dark">Ver ubicación</Button>
+                    </Col>
+                </Row>
+                <hr />
+            </Container>
+        </>
     );
 }
 

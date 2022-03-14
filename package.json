@@ -1,7 +1,8 @@
 {
-  "name": "landing",
-  "version": "0.1.0",
+  "name": "mosaicosnava",
+  "version": "1.0.0.0",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
@@ -10,11 +11,13 @@
     "react-dom": "^17.0.2",
     "react-responsive-carousel": "^3.2.22",
     "react-scripts": "5.0.0",
+    "react-social-icons": "^5.11.0",
+    "react-spa-prerender": "^1.0.14",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set \"INLINE_RUNTIME_CHUNK=false\" && set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
