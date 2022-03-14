@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Container, Col, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import landingImage from '../../assets/landingImage.jpeg';
+import landingImage from '../../assets/landing.jpeg';
+import './styles.css';
 
 const Landing = () =>
 {
@@ -9,6 +10,7 @@ const Landing = () =>
         <>
             <Image 
                 alt="Mosaicos y Terrazos Nava" 
+                className="landingLogo"
                 loading="lazy" 
                 fluid
                 src={ landingImage } 

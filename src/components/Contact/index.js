@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
-import Googlemaps from './Googlemaps';
+import Loading from '../Loading';
+
+const Googlemaps = lazy(() => import('./Googlemaps'));
 
 const Contact = () =>
 {
@@ -35,7 +37,9 @@ const Contact = () =>
                     </ul>
                 </Col>
                 <Col md={ 8 }>
-                    <Googlemaps />
+                    <Suspense fallback= { <Loading /> }>
+                        <Googlemaps />
+                    </Suspense>
                 </Col>
             </Row>
         </Container>

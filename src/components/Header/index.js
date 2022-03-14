@@ -15,7 +15,7 @@ const Header = () =>
                             alt="Logo"
                             src={ Logo }
                             width="30"
-                            height="30"
+                            height="25"
                             className="d-inline-block align-top"
                         />{ ' ' }
                         Mozaicos Artesanales Nava
