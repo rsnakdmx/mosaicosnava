@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RouterApp from './Router';
-import About from './About';
-import Lavadero from './Lavadero';
-import Contact from './Contact';
 import Footer from './Footer';
 import Header from './Header';
 import Landing from './Landing';
-import Mosaico from './Mosaico';
-import PageNotFount from './PageNotFound';
-import Terrazo from './Terrazo';
+import Loading from './Loading';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; 
+
+const About = lazy(() => import('./About'));
+const Lavadero = lazy(() => import('./Lavadero'));
+const Contact = lazy(() => import('./Contact'));
+const Mosaico = lazy(() => import('./Mosaico'));
+const PageNotFound = lazy(() => import('./PageNotFound'));
+const Terrazo = lazy(() => import('./Terrazo'));
+
 
 const App = () =>
 {
@@ -21,15 +24,41 @@ const App = () =>
             <Routes>
                 <Route path={ process.env.REACT_APP_PATH } element={ <RouterApp /> }>
                     <Route index element={ <Landing /> } />
-                    <Route path="nosotros" element={ <About /> } />
-                    <Route path="lavaderos" element={ <Lavadero /> } />
-                    <Route path="mosaicos" element={ <Mosaico /> } />
-                    <Route path="terrazos" element={ <Terrazo /> } />
-                    <Route path="ubicacion" element={ <Contact /> } />
+                    <Route path="nosotros" element={ 
+                        <Suspense fallback={ <Loading /> }>
+                            <About />
+                        </Suspense> } 
+                    />
+                    <Route path="lavaderos" element={ 
+                        <Suspense fallback={ <Loading /> }>
+                            <Lavadero />
+                        </Suspense> } 
+                    />
+                    <Route path="mosaicos" element={ 
+                        <Suspense fallback={ <Loading /> }>
+                            <Mosaico />
+                        </Suspense> } 
+                    />
+                    <Route path="terrazos" element={ 
+                        <Suspense fallback={ <Loading /> }>
+                            <Terrazo />
+                        </Suspense> } 
+                    />
+                    <Route path="ubicacion" element={ 
+                        <Suspense fallback={ <Loading /> }>
+                            <Contact />
+                        </Suspense> } 
+                    />
                 </Route>
-                <Route path="*" element={ <PageNotFount /> } />
+                <Route path="*" element={ 
+                    <Suspense fallback={ <Loading /> }>
+                        <PageNotFound />
+                    </Suspense> } 
+                />
             </Routes>
-            <Footer />
+            <Suspense fallback={ <Loading /> }>
+                <Footer />
+            </Suspense>
         </Router>
     );
 }
