@@ -1,9 +1,16 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const Mosaico = () =>
 {
     return(
-        <h1>Mosaico!</h1>
+        <Container fluid>
+            <Row>
+                <Col md={ 12 } className="my-5 text-center">
+                    <h1>Mosaicos</h1>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 

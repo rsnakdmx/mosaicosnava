@@ -29,7 +29,7 @@ const Header = () =>
                         <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'lavaderos' }>Lavaderos</Nav.Link>
                         <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'mosaicos' }>Mosaicos</Nav.Link>
                         <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'terrazos' }>Terrazos</Nav.Link>
-                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'contacto' }>Ubicación</Nav.Link>
+                        <Nav.Link as={ Link } to={ process.env.REACT_APP_PATH + 'ubicacion' }>Ubicación</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

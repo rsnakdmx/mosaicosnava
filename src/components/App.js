@@ -25,7 +25,7 @@ const App = () =>
                     <Route path="lavaderos" element={ <Lavadero /> } />
                     <Route path="mosaicos" element={ <Mosaico /> } />
                     <Route path="terrazos" element={ <Terrazo /> } />
-                    <Route path="contacto" element={ <Contact /> } />
+                    <Route path="ubicacion" element={ <Contact /> } />
                 </Route>
                 <Route path="*" element={ <PageNotFount /> } />
             </Routes>
