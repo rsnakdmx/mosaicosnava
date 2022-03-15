@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Col, Image, Row } from 'react-bootstrap';
-import AcercaDe from '../../assets/acercadenostros.jpg';
+import acercaDeWebp from '../../assets/acercadenostros.webp';
+import acercaDeJpg from '../../assets/acercadenostros.jpg';
 
 const About = () =>
 {
@@ -13,13 +14,20 @@ const About = () =>
             </Row>
             <Row>
                 <Col md={ 12 } className="text-center my-5">
-                    <Image
-                        alt="Acerca de Nosotros"
-                        src={ AcercaDe }
-                        loading="lazy"
-                        width={ 250 }
-                        height={ 215 }
-                    />
+                    <picture>
+                        <source
+                            width={ 250 }
+                            height={ 215 }
+                            srcSet={ acercaDeWebp } 
+                        />
+                        <Image 
+                            alt="Acerca de Nosotros"
+                            width={ 250 }
+                            height={ 215 }
+                            loading="lazy"
+                            src={ acercaDeJpg } 
+                        />
+                    </picture>
                 </Col>
             </Row>
             <Row>

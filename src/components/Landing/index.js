@@ -1,20 +1,29 @@
 import React from 'react';
 import { Button, Container, Col, Image, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import landingImage from '../../assets/landing.jpeg';
+import landingWebp from '../../assets/landing.webp';
+import landingJpeg from '../../assets/landing.jpeg';
 import './styles.css';
 
 const Landing = () =>
 {
     return(
         <>
-            <Image 
-                alt="Mosaicos y Terrazos Nava" 
-                className="landingLogo"
-                loading="lazy" 
-                fluid
-                src={ landingImage } 
-            />
+            <picture>
+                <source
+                    className="landingLogo" 
+                    height={ 480 }
+                    width={ 600 }
+                    srcSet={ landingWebp } 
+                />
+                <Image 
+                    alt="Mosaicos Artsenalaes Nava" 
+                    className="landingLogo" 
+                    height={ 480 }
+                    width={ 600 }
+                    src={ landingJpeg } 
+                />
+            </picture>
             <Container fluid>
                 <Row>
                     <Col md={ 12 } className="my-5 text-center">
