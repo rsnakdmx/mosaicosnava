@@ -7,7 +7,7 @@ const Googlemaps = lazy(() => import('./Googlemaps'));
 const Contact = () =>
 {
     return(
-        <Container fluid>
+        <Container>
             <Row className="my-5">
                 <Col md={ 12 } className="text-center">
                     <h1>¿Donde puedes encontrarnos?</h1>
@@ -36,7 +36,7 @@ const Contact = () =>
                         <li><a href="mailto:mosaicosnava1934@hotmail.com">mosaicosnava1934@hotmail.com</a></li>
                     </ul>
                 </Col>
-                <Col md={ 8 }>
+                <Col md={{ span: 4, offset: 2 }}>
                     <Suspense fallback= { <Loading /> }>
                         <Googlemaps />
                     </Suspense>

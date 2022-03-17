@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Col, Image, Row } from 'react-bootstrap';
 import acercaDeWebp from '../../assets/acercadenostros.webp';
 import acercaDeJpg from '../../assets/acercadenostros.jpg';
+import './styles.css';
 
 const About = () =>
 {
@@ -16,15 +17,16 @@ const About = () =>
                 <Col md={ 12 } className="text-center my-5">
                     <picture>
                         <source
+                            className="aboutLogo"
                             width={ 250 }
                             height={ 215 }
                             srcSet={ acercaDeWebp } 
                         />
                         <Image 
                             alt="Acerca de Nosotros"
+                            className="aboutLogo"
                             width={ 250 }
                             height={ 215 }
-                            loading="lazy"
                             src={ acercaDeJpg } 
                         />
                     </picture>
@@ -33,10 +35,10 @@ const About = () =>
             <Row>
                 <Col md={ 12 } className="mb-5">
                     <p>
-                        Somos fabricantes desde 1934. Se inicio con la generación del Sr <strong>Cornelio Nava</strong> el cúal 
-                        fue uno de los primeros mosaiqueros de la CDMX. Junto con él su ahijado el Sr 
-                        <strong>Leonardo Palma Rivera</strong>. Ambos ya habian trabajado para los dueños españoles de las 
-                        fabricas de modernas, <strong>Quintana</strong> y <strong>Puente</strong>.
+                        Somos fabricantes desde <strong>1934</strong>. Se inicio con la generación del Sr 
+                        <strong>Cornelio Nava</strong> el cúal fue uno de los primeros mosaiqueros de la CDMX. Junto con él su 
+                        ahijado el Sr <strong>Leonardo Palma Rivera</strong>. Ambos ya habian trabajado para los dueños españoles 
+                        de las fabricas de modernas, <strong>Quintana</strong> y <strong>Puente</strong>.
                     </p>
                     <p>
                         La experiencia y el paso del tiempo le permitio al Sr. Leonardo independizarse creando su propio taller en el 
