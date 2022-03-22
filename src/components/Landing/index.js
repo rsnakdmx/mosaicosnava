@@ -5,6 +5,8 @@ import landingWebp from '../../assets/landing.webp';
 import landingJpeg from '../../assets/landing.jpeg';
 import './styles.css';
 
+
+
 const Landing = () =>
 {
     return(

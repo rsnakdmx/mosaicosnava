@@ -35,10 +35,10 @@ const About = () =>
             <Row>
                 <Col md={ 12 } className="mb-5">
                     <p>
-                        Somos fabricantes desde <strong>1934</strong>. Se inicio con la generación del Sr 
-                        <strong>Cornelio Nava</strong> el cúal fue uno de los primeros mosaiqueros de la CDMX. Junto con él su 
-                        ahijado el Sr <strong>Leonardo Palma Rivera</strong>. Ambos ya habian trabajado para los dueños españoles 
-                        de las fabricas de modernas, <strong>Quintana</strong> y <strong>Puente</strong>.
+                        Somos fabricantes desde <strong>1934</strong>. Se inicio con la generación del 
+                        Sr <strong>Cornelio Nava</strong> el cúal fue uno de los primeros mosaiqueros de la CDMX. 
+                        Junto con él su ahijado el Sr <strong>Leonardo Palma Rivera</strong>. Ambos ya habian trabajado para 
+                        los dueños españoles de las fabricas de modernas, <strong>Quintana</strong> y <strong>Puente</strong>.
                     </p>
                     <p>
                         La experiencia y el paso del tiempo le permitio al Sr. Leonardo independizarse creando su propio taller en el 

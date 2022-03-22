@@ -7,19 +7,24 @@
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^12.0.0",
         "@testing-library/user-event": "^13.2.1",
+        "patch-package": "^6.4.7",
+        "preload-webpack-plugin": "3.0.0-beta.3",
         "react": "^17.0.2",
+        "react-bootstrap": "^2.2.1",
         "react-dom": "^17.0.2",
-        "react-responsive-carousel": "^3.2.22",
+        "react-grid-gallery": "^0.5.5",
         "react-scripts": "5.0.0",
         "react-social-icons": "^5.11.0",
         "react-spa-prerender": "^1.0.14",
-        "web-vitals": "^2.1.0"
+        "web-vitals": "^2.1.0",
+        "webpack-subresource-integrity": "^5.1.0"
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "set \"INLINE_RUNTIME_CHUNK=false\" && set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
+        "postinstall": "patch-package",
         "postbuild": "react-spa-prerender"
     },
     "eslintConfig": {

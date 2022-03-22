@@ -1,0 +1,35 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index 2b1b3bb..c421a37 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -53,6 +53,8 @@ const babelRuntimeEntryHelpers = require.resolve(
+ const babelRuntimeRegenerator = require.resolve('@babel/runtime/regenerator', {
+   paths: [babelRuntimeEntry],
+ });
++const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
++const PreloadWebpackPlugin = require('preload-webpack-plugin');
+ 
+ // Some apps do not need the benefits of saving a web request, so not inlining the chunk
+ // makes for a smoother build process.
+@@ -212,8 +214,12 @@ module.exports = function (webpackEnv) {
+     output: {
+       // The build folder.
+       path: paths.appBuild,
++      crossOriginLoading: "anonymous",
+       // Add /* filename */ comments to generated require()s in the output.
+       pathinfo: isEnvDevelopment,
++      trustedTypes: {
++        policyName: 'mosaicosnava#webpack',
++      },
+       // There will be one main bundle, and one file per asynchronous chunk.
+       // In development, it does not produce real files.
+       filename: isEnvProduction
+@@ -628,6 +634,8 @@ module.exports = function (webpackEnv) {
+             : undefined
+         )
+       ),
++      new SubresourceIntegrityPlugin(),
++      new PreloadWebpackPlugin(),
+       // Inlines the webpack runtime script. This script is too small to warrant
+       // a network request.
+       // https://github.com/facebook/create-react-app/issues/5358
