@@ -1,8 +1,17 @@
 import React from 'react';
 import { Button, Container, Col, Image, Row } from 'react-bootstrap';
+import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 import landingWebp from '../../assets/landing.webp';
 import landingJpeg from '../../assets/landing.jpeg';
+import Uno from '../../assets/1.jpeg';
+import Unowebp from '../../assets/1.webp';
+import Dos from '../../assets/2.jpeg';
+import Doswebp from '../../assets/2.webp';
+import Tres from '../../assets/3.jpeg';
+import Treswebp from '../../assets/3.webp';
+import Cuatro from '../../assets/4.jpeg';
+import Cuatrowebp from '../../assets/4.webp';
 import './styles.css';
 
 
@@ -46,7 +55,7 @@ const Landing = () =>
                 <hr />
 
                 <Row>
-                    <Col md={ 12 } className="my-5 text-center">
+                    <Col md={ 12 } className="mt-5 text-center">
                         <h2>¿Por qué se recomienda el mosaico y el terrazo?</h2>
                         <p className="text-muted">
                             El mosaico hidráulico es un material resistente hecho a base de marmol blanco, cemento blanco, 
@@ -57,6 +66,36 @@ const Landing = () =>
                             El mosaico hidráulico es un material ecológico ya que durante su elaboración no se necesita 
                             combustión alguna.
                         </p>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={{ offset: 4, span: 4 }} className="mb-5">
+                        <Carousel autoPlay={ true } infiniteLoop={ true } showThumbs={ false }>
+                            <div>
+                                <picture>
+                                    <source srcSet={ Unowebp } type="image/webp" />
+                                    <img src={ Uno } />
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcSet={ Doswebp } type="image/webp" />
+                                    <img src={ Dos } />
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcSet={ Treswebp } type="image/webp" />
+                                    <img src={ Tres } />
+                                </picture>
+                            </div>
+                            <div>
+                                <picture>
+                                    <source srcSet={ Cuatrowebp } type="image/webp" />
+                                    <img src={ Cuatro } />
+                                </picture>
+                            </div>
+                        </Carousel>
                     </Col>
                 </Row>
                 <hr />
