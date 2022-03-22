@@ -6,6 +6,8 @@ import Header from './Header';
 import Landing from './Landing';
 import Loading from './Loading';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import './trustedPolicy';
 
 const About = lazy(() => import('./About'));
 const Lavadero = lazy(() => import('./Lavadero'));
